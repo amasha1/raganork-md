@@ -32,13 +32,13 @@ Module({
   var myid = message.client.user.id.split(":")[0]
   var buttons = [{
     urlButton: {
-        displayText: 'Github',
-        url: 'https://github.com/souravkl11/raganork'
+        displayText: '💻GITHUB💻',
+        url: 'https://github.com/amasha1'
     }
 }, {
   urlButton: {
-    displayText: 'Contact Owner',
-    url: 'https://wa.me/'+BOT_INFO.split(";")[2]+'?text=Hey+bro'
+    displayText: 'DΞVΞLOPΞЯ : 𝙰𝙼𝙰𝚂𝙷𝙰',
+    url: 'wa.me/+94701651987?text=Hey+bro'
     }
 }, {
     quickReplyButton: {
@@ -52,8 +52,8 @@ Module({
     }  
 }, {
     quickReplyButton: {
-        displayText: 'Support group',
-        id: 'support'+myid
+        displayText: '𝙼𝚈 𝚆𝙰. 𝙶𝚁𝚄𝙾𝙿 |🧸🌸',
+        id: 'https://chat.whatsapp.com/KwhBPTk1yvWLrpmGcgdA2h'+myid
     }
 }]
 var gc=commands.filter(a=>"group"===a.use),oc=commands.filter(a=>"owner"===a.use),dc=commands.filter(a=>"download"===a.use),ec=commands.filter(a=>"edit"===a.use),sc=commands.filter(a=>"search"===a.use),uc=commands.filter(a=>"utility"===a.use),setarr=[...gc,...dc,...oc,...ec,...sc,...uc]
@@ -65,12 +65,6 @@ if (setarr[i].use === 'group') {
 if (setarr[i].use === 'download') {
   dlmsg += `┃❉│ ${Math.floor(parseInt(i)+1)}. ${setarr[i].pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/)[2]} \n`
 }
-if (setarr[i].use === 'owner') {
-  ownmsg += `┃❉│ ${Math.floor(parseInt(i)+1)}. ${setarr[i].pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/)[2]} \n`
-}
-if (setarr[i].use === 'edit') {
-  edmsg += `┃❉│ ${Math.floor(parseInt(i)+1)}. ${setarr[i].pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/)[2]} \n`
-}
 if (setarr[i].use === 'search') {
   srmsg += `┃❉│ ${Math.floor(parseInt(i)+1)}. ${setarr[i].pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/)[2]} \n`
 }
@@ -78,22 +72,17 @@ if (setarr[i].use === 'utility') {
   utilmsg += `┃❉│ ${Math.floor(parseInt(i)+1)}. ${setarr[i].pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/)[2]} \n`
 }
 }
-  var menu = `╭═══〘 ${BOT_INFO.split(";")[0]} 〙═══⊷❍
+  var menu = `╭══〘 ${*QUEEN LIZA BOT*} 〙══⊷❍
 ┃❉╭──────────────
-┃❉│
-┃❉│ Owner : ${BOT_INFO.split(";")[1]}
-┃❉│ User : ${message.senderName}
-┃❉│ Mode : ${MODE}
-┃❉│ Server : ${config.HEROKU.APP_NAME}
-┃❉│ Total RAM: ${total}
-┃❉│ Available RAM: ${used}
-┃❉│ Disk Space: 620 GB
+┃❉│ 
+┃❉│ Owner : ${🧸 𝙰𝙼𝙰𝚂𝙷𝙰}
+┃❉│ Owner : ${🧸 MAYOMI}
 ┃❉│ Version: ${config.VERSION}
-┃❉│
+┃❉│ User : ${message.userName}
 ┃❉│
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃❉│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃❉│   ${BOT_INFO.split(";")[0]}
+┃❉│   ${DΞVΞLOPΞЯ : 𝙰𝙼𝙰𝚂𝙷𝙰 |🧸🌸}
 ┃❉│ 
 ┃❉╰───────────────
 ╰═════════════════⊷
@@ -110,25 +99,13 @@ ${gmsg}
 ${dlmsg}
 ┃❉╰─────────────────
 ╰══════════════════⊷❍
-╭════〘 Owner 〙════⊷❍
-┃❉╭─────────────────
-┃❉│ 
-${ownmsg}
-┃❉╰─────────────────
-╰══════════════════⊷❍
-╭════〘 Edit 〙════⊷❍
-┃❉╭─────────────────
-┃❉│ 
-${edmsg}
-┃❉╰─────────────────
-╰══════════════════⊷❍
 ╭════〘 Search 〙════⊷❍
 ┃❉╭─────────────────
 ┃❉│ 
 ${srmsg}
 ┃❉╰─────────────────
 ╰══════════════════⊷❍`
-return await message.sendImageTemplate(await skbuffer(BOT_INFO.split(";")[3]),FancyRandom(menu),"All rights reserved "+BOT_INFO.split(";")[0],buttons);
+return await message.sendImageTemplate(await skbuffer(BOT_INFO.split(";")[3]),FancyRandom(menu),"*𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙰𝙼𝙰𝚂𝙷𝙰 ²⁰²²*"+BOT_INFO.split(";")[0],buttons);
 }))
 Module({
   pattern: 'alive',
